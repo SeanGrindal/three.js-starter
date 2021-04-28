@@ -44,6 +44,8 @@ class Sketch {
         this.renderer.render(this.scene, this.camera)
 
         this.updateRequest = window.requestAnimationFrame(this.tick.bind(this))
+
+        this.material.uniforms.uTime.value = this.elapsedTime
     }
 
     destroy() {
